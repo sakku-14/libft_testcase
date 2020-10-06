@@ -5,6 +5,15 @@ void ft_bzero(void *s, size_t n);
 
 int main(void)
 {
+	int i = 0;
+	char str[5] = "11111";
+	ft_bzero(str+1, 2);
+	while (i < 5)
+	{
+		printf("%c, ", str[i]);
+		i++;
+	}
+
 	char str1[] = "0123456789";
 	ft_bzero(str1+2, 3);
 	printf("%s\n",str1);
