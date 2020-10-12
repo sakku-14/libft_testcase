@@ -17,5 +17,13 @@ int main()
 		strs1++;
 	}
 
+	char **strs2 = ft_split("      split       this for   me  !       ", ' ');
+	while (*strs2)
+	{
+		printf("%s\n", *strs2);
+		strs2++;
+	}
+
+
 	return (0);
 }
