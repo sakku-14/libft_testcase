@@ -4,14 +4,13 @@
 
 int main()
 {
-	char *s1 = "where is my ", *s2 = "malloc ???", *str;
+	char *str, *s1 = "where is my ", *s2 = "malloc ???";
 	str = ft_strjoin(s1, s2);
 	printf("%s\n", str);
 
-	char *s3 = "where is my malloc ???";
-	if (!strcmp(str, s3))
-		printf("success\n");
-	else
-		printf("str: %s\ns3: %s\n", str, s3);
+	char *str2, *s3 = "aaaaa", *s4 = "bbbbb";
+	str2 = ft_strjoin(s3, s4);
+	printf("%s\n", str2);
+
 	return (0);
 }
