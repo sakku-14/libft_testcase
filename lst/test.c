@@ -1,10 +1,7 @@
 #include <stdio.h>
 #include "libft.h"
 
-void	del(void *content)
-{
-	content = NULL;
-}
+void	del(void *content);
 
 int	main()
 {
@@ -76,4 +73,9 @@ int	main()
 		*list2 = (*list2)->next;
 	}
 	*list2 = tmp2;
+}
+
+void	del(void *content)
+{
+	ft_bzero(content, sizeof(content));
 }
