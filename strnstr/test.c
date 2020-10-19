@@ -28,7 +28,7 @@ char *new_strnstr(const char *haystack,const char *needle, size_t len)
 		return ((char *)haystack);
 	if (*haystack == '\0' || len < 1)
 		return (NULL);
-	while (ft_strncmp(haystack, needle, ft_strlen(needle)) != 0)
+	while (ft_strlen(needle) > len || ft_strncmp(haystack, needle, ft_strlen(needle)) != 0)
 	{
 		while (*haystack != *needle)
 		{
@@ -67,6 +67,22 @@ char *new_strnstr(const char *haystack,const char *needle, size_t len)
 
 int main()
 {
+	char h0[] = "abcabcabc";
+	char n0[] = "abc";
+	printf("%s\n", ft_strnstr(h0, n0, 1));
+	char h00[] = "abcabcabc";
+	char n00[] = "abc";
+	printf("%s\n", strnstr(h00, n00, 1));
+	char h000[] = "abcabcabc";
+	char n000[] = "abc";
+	printf("%s\n", asc_strnstr(h000, n000, 1));
+	char h0000[] = "abcabcabc";
+	char n0000[] = "abc";
+	printf("%s\n", new_strnstr(h0000, n0000, 1));
+
+	printf("\n");
+
+	printf("\n");
 	char h1[3] = "123";
 	char n1[] = "123";
 	printf("%s\n", ft_strnstr(h1, n1, 3));
