@@ -1,8 +1,30 @@
 #include <string.h>
+#include <stdio.h>
 #include "libft.h"
 
 int main()
 {
+	char h1[3] = "123";
+	char n1[] = "123";
+	printf("%s\n", ft_strnstr(h1, n1, 3));
+	char h11[3] = "123";
+	char n11[] = "123";
+	printf("%s\n", strnstr(h11, n11, 3));
+
+	char h3[3] = "123";
+	char n3[3] = "123";
+	printf("%s\n", ft_strnstr(h3, n3, 3));
+	char h33[3] = "123";
+	char n33[3] = "123";
+	printf("%s\n", strnstr(h33, n33, 3));
+
+	char h2[] = "1234567890";
+	char n2[] = "90123";
+	printf("%s\n", ft_strnstr(h2, n2, 30));
+	char h22[] = "1234567890";
+	char n22[] = "90123";
+	printf("%s\n", strnstr(h22, n22, 30));
+
 	char big1[] = "1234567890";
 	char little1[] = "456";
 	printf("%s\n", ft_strnstr(big1, little1, 30));
